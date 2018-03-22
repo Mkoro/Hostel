@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+    <children>
+        <Pane fx:id="popUpHolder" prefHeight="118.0" prefWidth="181.0" styleClass="login-card">
+            <children>
+                <JFXButton fx:id="btnLogoff" layoutX="7.0" layoutY="7.0" onAction="#loggOff" prefHeight="50.0" prefWidth="166.0" style="-fx-alignment: LEFT;" text="Log off">
+                    <font>
+                        <Font name="Roboto Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <MaterialDesignIconView glyphName="KEYBOARD_RETURN" size="16.0" wrappingWidth="43.0" />
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnClose" layoutX="7.0" layoutY="64.0" onAction="#close" prefHeight="50.0" prefWidth="166.0" style="-fx-alignment: LEFT;" text="Close">
+                    <font>
+                        <Font name="Roboto Light" size="14.0" />
+                    </font>
+                    <graphic>
+                        <MaterialDesignIconView glyphName="CLOSE" size="16.0" wrappingWidth="43.0" />
+                    </graphic>
+                </JFXButton>
+            </children>
+        </Pane>
+        <ImageView fitHeight="650.0" fitWidth="1100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/bg.png" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <VBox fx:id="groupCompany" layoutX="159.0" layoutY="268.0" spacing="8.0">
+                    <children>
+                        <AnchorPane fx:id="menuCompany" onMouseClicked="#showAdmission" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/company.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Admission" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Form" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="menuSynch" onMouseClicked="#synchroniseOnline" prefHeight="160.0" prefWidth="130.0" style="-fx-background-color: rgb(0, 192, 239,0.8);" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/Cloud.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Synch" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Online" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="groupTraining" layoutX="407.0" layoutY="237.0" spacing="8.0">
+                    <children>
+                        <AnchorPane fx:id="menuTraining" onMouseClicked="#showPayment" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/training.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Payment" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Form" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/student.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Student" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Placed" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="groupReports" layoutX="677.0" layoutY="207.0" prefHeight="328.0" prefWidth="130.0" spacing="8.0">
+                    <children>
+                        <AnchorPane fx:id="menuReports" onMouseClicked="#showHostel" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/reports.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hostel" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Form" textAlignment="CENTER" wrappingWidth="98.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="viewStudents" onMouseClicked="#showStudents" prefHeight="160.0" prefWidth="130.0" styleClass="menus" stylesheets="@style.css">
+                            <children>
+                                <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/course.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" layoutX="3.0" layoutY="101.0" prefHeight="50.0" prefWidth="122.0">
+                                    <children>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="View" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Students" textAlignment="CENTER" wrappingWidth="89.13671875">
+                                            <font>
+                                                <Font name="Roboto Medium" size="14.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="groupAbout" layoutX="835.0" layoutY="180.0" spacing="8.0" />
+                <Text fill="WHITE" layoutX="68.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="278.13671875">
+                    <font>
+                        <Font name="Roboto Bold" size="36.0" />
+                    </font>
+                </Text>
+                <VBox alignment="CENTER_LEFT" layoutX="96.0" layoutY="73.0" prefHeight="80.0" prefWidth="256.0" spacing="5.0" />
+                <JFXButton fx:id="btnAccount" buttonType="RAISED" layoutX="861.0" layoutY="25.0" onAction="#showActions" styleClass="btn-account" text="Account" />
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
